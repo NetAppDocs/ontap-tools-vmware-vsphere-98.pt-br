@@ -1,0 +1,23 @@
+---
+permalink: configure/concept_configure_vsc_for_vmware_vsphere_environment.html 
+sidebar: sidebar 
+keywords:  
+summary: 'O Virtual Storage Console (VSC) suporta vários ambientes. Alguns dos recursos nesses ambientes podem exigir configuração adicional.' 
+---
+= Configurar as ferramentas do ONTAP para o VMware vSphere
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Virtual Storage Console (VSC) é compatível com vários ambientes. Alguns dos recursos nesses ambientes podem exigir configuração adicional.
+
+Você pode ter que executar algumas das seguintes tarefas para configurar seus hosts ESXi, sistemas operacionais convidados e VSC:
+
+* Verificando as configurações do host ESXi, incluindo as configurações DE DESMAPEAR
+* Adicionando valores de tempo limite para sistemas operacionais convidados
+* Regenerando o certificado SSL VSC
+* Criação de perfis de capacidade de armazenamento e alarmes de limite
+* Modificação do arquivo de preferências para permitir a montagem de datastores em diferentes sub-redes
+

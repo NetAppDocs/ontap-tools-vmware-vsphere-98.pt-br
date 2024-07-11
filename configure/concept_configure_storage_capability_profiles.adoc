@@ -1,0 +1,62 @@
+---
+permalink: configure/concept_configure_storage_capability_profiles.html 
+sidebar: sidebar 
+keywords: storage capability profiles 
+summary: O provedor VASA para ONTAP permite criar perfis de capacidade de armazenamento e mapeá-los para o seu armazenamento. Isso ajuda a manter a consistência em todo o storage. Você também pode usar o provedor VASA para verificar a conformidade entre o armazenamento e os perfis de capacidade de armazenamento. 
+---
+= Visão geral dos perfis de capacidade de armazenamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O provedor VASA para ONTAP permite criar perfis de capacidade de armazenamento e mapeá-los para o seu armazenamento. Isso ajuda a manter a consistência em todo o storage. Você também pode usar o provedor VASA para verificar a conformidade entre o armazenamento e os perfis de capacidade de armazenamento.
+
+As funcionalidades de storage são um conjunto de atributos do sistema de storage que identifica um nível específico de performance de storage, eficiência de storage e outras funcionalidades, como criptografia para o objeto de storage associado à funcionalidade de storage.
+
+Para armazenamentos de dados tradicionais, você pode usar um perfil de capacidade de armazenamento para criar armazenamentos de dados de forma consistente com atributos comuns e atribuir política de QoS a eles. Durante o provisionamento, o VSC exibe clusters, SVMs e agregados que correspondem ao perfil de funcionalidades de storage. Você pode gerar um perfil de capacidade de armazenamento a partir de datastores tradicionais existentes usando a opção *GLOBAL auto-GENERATE PROFILES* no menu Storage Mapping. Depois que o perfil for criado, você poderá usar o VSC para monitorar a conformidade dos datastores com o perfil.
+
+Quando usado com armazenamentos de dados vVols, o assistente de provisionamento pode usar vários perfis de capacidade de storage para criar volumes FlexVol diferentes no armazenamento de dados. Você pode usar a política de armazenamento de VM para criar automaticamente vVols para uma máquina virtual em volumes FlexVol apropriados, conforme definido. Por exemplo, você pode criar perfis para classes de armazenamento comuns (como limites de desempenho e outros recursos, como criptografia ou FabricPool). Posteriormente, você pode criar políticas de armazenamento de VM no vCenter Server representando classes de negócios de máquinas virtuais e vinculá-las ao perfil de capacidade de armazenamento apropriado por nome (por exemplo, produção, Teste, RH).
+
+Quando usado com vVols, o perfil de capacidade de armazenamento também é usado para definir o desempenho de armazenamento para a máquina virtual individual e colocá-lo no FlexVol volume no datastore vVols que melhor satisfaz o requisito de desempenho. Você pode especificar uma política de QoS com IOPS mínimo e/ou máximo para performance. Você pode usar as políticas padrão ao provisionar inicialmente uma máquina virtual ou alterar a política de armazenamento de VM mais tarde, se os requisitos da empresa mudarem. A versão 9,8 das ferramentas do ONTAP fornece os seguintes novos perfis de capacidade de armazenamento padrão:
+
+* FAS_MAX20
+* FAS_default
+* AFF_default
+* AFF_disposição em camadas
+* AFF_encriptado
+* AFF_Encrypted_Tiering
+* AFF_Encrypted_Min50
+
+
+Em seguida, o vCenter Server associa a capacidade de armazenamento de um LUN ou volume ao datastore que é provisionado nesse LUN ou volume. Isso permite provisionar uma máquina virtual em um datastore que corresponda ao perfil de armazenamento da máquina virtual e garantir que todos os datastores em um cluster de datastore tenham os mesmos níveis de serviço de armazenamento.
+
+Com as ferramentas do ONTAP para VMware vSphere, você pode configurar cada armazenamento de dados de volume virtual (vVols) com um novo perfil de capacidade de armazenamento que suporte o provisionamento de máquinas virtuais com requisitos de IOPS variáveis no mesmo armazenamento de dados vVols. Durante a execução do fluxo de trabalho de provisionamento de VM com o requisito de IOPS, todos os datastores vVols são listados na lista de datastore compatível.
+
+
+NOTE: Quando você tenta provisionar ou modificar máquinas virtuais para o vCenter Server antes de 6,5, apenas os armazenamentos de dados vVols que contêm perfis de capacidade de armazenamento com desempenho definido como "MAX_IOPS" são listados na lista de datastore compatível. Os armazenamentos de dados vVols restantes são listados na lista de datastore incompatível. Você pode ignorar essa classificação e selecionar qualquer datastore vVols na lista de datastore incompatível para provisionar ou modificar a máquina virtual.
+
+
+
+== Considerações para criar e editar perfis de capacidade de armazenamento
+
+Você deve estar ciente das considerações para criar e editar perfis de capacidade de armazenamento.
+
+* Você pode configurar IOPS mínimo somente em sistemas AFF.
+* Você pode configurar métricas de QoS em um nível de armazenamento de dados de volume virtual (VVol).
++
+Esse recurso oferece maior flexibilidade na atribuição de métricas de QoS variadas para VMDKs diferentes da mesma máquina virtual provisionada em um datastore virtual.
+
+* Você pode configurar perfis de capacidade de storage para o FAS e o AFFdatastores.
++
+Para sistemas FAS, você pode configurar a reserva de espaço para ser espessa ou fina, mas para sistemas AFF, a reserva de espaço só pode ser configurada como thin.
+
+* Você pode usar perfis de capacidade de storage para fornecer criptografia para seus datastores.
+* Não é possível modificar os perfis de capacidade de armazenamento existentes (criados antes da versão 7,2) após a atualização de uma versão anterior das ferramentas do ONTAP para VMware vSphere para a versão mais recente das ferramentas do ONTAP.
++
+Os perfis de capacidade de armazenamento legados são retidos para compatibilidade com versões anteriores. Se os modelos padrão não estiverem em uso, durante a atualização para a versão mais recente das ferramentas do ONTAP, os modelos existentes serão substituídos para refletir as novas métricas de QoS relacionadas ao desempenho dos perfis de funcionalidades de storage.
+
+* Não é possível modificar ou usar os perfis de funcionalidades de storage herdados para provisionar novos armazenamentos de dados virtuais ou políticas de storage de VM.
+* Você deve usar novos perfis de funcionalidades de storage para todos os novos datastores.
+

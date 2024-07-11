@@ -1,0 +1,79 @@
+---
+permalink: deploy/task_enable_vasa_provider_for_configuring_virtual_datastores.html 
+sidebar: sidebar 
+keywords:  
+summary: 'As ferramentas do ONTAP para VMware vSphere têm a capacidade do provedor VASA ativada por padrão. Você pode configurar armazenamentos de dados do VMware Virtual volumes (vVols) com os perfis de capacidade de armazenamento necessários para cada datastore vVols.' 
+---
+= Habilite o provedor VASA para configurar datastores virtuais
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As ferramentas do ONTAP para VMware vSphere têm a capacidade do provedor VASA ativada por padrão. Você pode configurar armazenamentos de dados do VMware Virtual volumes (vVols) com os perfis de capacidade de storage necessários para cada datastore vVols.
+
+*O que você vai precisar*
+
+* Você deve ter configurado a instância do vCenter Server e configurado o ESXi.
+* Você deve ter implantado as ferramentas do ONTAP .
+
+
+*Sobre esta tarefa*
+
+Se a capacidade do Fornecedor VASA estiver desativada antes de atualizar para a versão 9.7.1 das ferramentas do ONTAP , a capacidade do Fornecedor VASA permanece desativada após a atualização. Esta versão permite habilitar o recurso de replicação do vVols para datastores vVols.
+
+*Passos*
+
+. Faça login na interface de usuário da Web do VMware vSphere.
+. No vSphere Client, clique em *Menu* > *Console de ferramentas do ONTAP*.
+. Clique em *Configurações*.
+. Clique em *Gerenciar recursos* na guia Configurações administrativas.
+. Na caixa de diálogo Gerenciar recursos, selecione a extensão Fornecedor VASA para ativar.
+. Se você quiser usar a capacidade de replicação para armazenamentos de dados vVols, use o botão de alternância *Enable vVols replication*.
+. Introduza o endereço IP das ferramentas do ONTAP e a palavra-passe do administrador e, em seguida, clique em *aplicar*.
++
+
+NOTE: Se o status do provedor VASA for exibido como ""Offline"" mesmo depois de ativar a extensão do provedor VASA, verifique ``/var/log/vmware/vmware-sps/sps.log` se há erros de conexão com o provedor VASA ou reinicie o serviço ""vmware-sps"".
+
+
+
+
+
+== Registre os serviços de API do OnCommand com o ONTAP 9.6 ou versões anteriores
+
+Se você estiver usando o ONTAP 9.6 ou anterior, o painel vVols poderá exibir os detalhes dos armazenamentos de dados e máquinas virtuais do VMware Virtual volumes (vVols) somente se você tiver registrado os serviços de API do OnCommand para o provedor VASA para obter dados para os relatórios de VM e armazenamento de dados do vVols.
+
+*O que você vai precisar*
+
+Você deve ter baixado o OnCommand API Services 2,1 ou posterior do site de suporte da NetApp.
+
+
+NOTE: O painel do vVols exibe métricas de desempenho somente quando os datastores SAN vVols e as máquinas virtuais são configurados usando o ONTAP 9.3 ou posterior.
+
+*Passos*
+
+. Na página inicial das ferramentas do ONTAP, clique em *Configurações*.
+. Clique em *Manage Extension* (Gerenciar extensão) na guia Administrative Settings (Configurações administrativas).
+. Use o controle deslizante Register OnCommand API Services para habilitar os Serviços de API do OnCommand.
+. Insira o endereço IP, a porta de serviço e as credenciais dos Serviços de API da OnCommand.
++
+Você também pode usar a caixa de diálogo Gerenciar extensões do provedor VASA para as seguintes modificações:
+
++
+** Para atualizar o Registro dos Serviços de API do OnCommand quando houver alguma alteração nas credenciais.
+** Para cancelar o Registro dos Serviços de API do OnCommand quando você não precisar mais do painel vVols.
++
+Você deve desmarcar a caixa de seleção Registrar serviços de API do OnCommand para remover o Registro de serviços de API do OnCommand para o provedor VASA.
+
+
+
+. Clique em *aplicar*.
++
+O painel do vVols exibe as métricas para armazenamentos de dados do ONTAP 9.6 ou anteriores do SAN vVols somente após o Registro dos Serviços de API do OnCommand estar concluído.
+
+
+
+*Informações relacionadas*
+
+https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"]

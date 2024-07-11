@@ -1,0 +1,38 @@
+---
+permalink: manage/concept_decide_whether_to_use_this_guide.html 
+sidebar: sidebar 
+keywords: scope of guide 
+summary: Você pode usar este guia para encontrar rapidamente informações sobre tarefas que envolvem provisionamento e otimização de armazenamento e monitoramento de datastores e máquinas virtuais. 
+---
+= Decida se deve usar este guia
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar este guia para encontrar rapidamente informações sobre tarefas que envolvem provisionamento e otimização de armazenamento e monitoramento de datastores e máquinas virtuais.
+
+As informações neste guia são para o usuário do VSC, não para o administrador do sistema. Este guia fornece informações sobre todas as tarefas pós-implantação para as ferramentas do ONTAP vSphere.
+
+*Requisitos para usar este guia*
+
+Este guia baseia-se nas seguintes premissas:
+
+* Você instalou e configurou o VSC.
+* Os recursos necessários para as tarefas que você está executando foram instalados.
++
+Esses recursos podem incluir o plug-in NFS para VMware VAAI, o provedor VASA para ONTAP e o adaptador de replicação de storage.
+
+* O VSC descobriu todos os sistemas de storage que você está usando.
+* O controle de acesso baseado em função (RBAC) para o vCenter Server e o ONTAP foi configurado.
++
+Se você não tiver todos os Privileges e permissões necessários, a tarefa que você está executando pode parecer funcionar enquanto você passa pelo assistente, mas ainda não consegue concluir com êxito.
+
+
+
+A maioria das tarefas apresentadas neste guia também requer que apenas uma operação de cada vez seja executada no datastore de destino ou na máquina virtual.
+
+Se você tiver dúvidas sobre o VSC ou quiser compartilhar informações com outros usuários do VSC, acesse o Fórum de Comunidades do NetApp.
+
+https://community.netapp.com/t5/Products-and-Services/ct-p/products-and-solutions["Comunidade NetApp: Console de armazenamento virtual para VMware vSphere"]

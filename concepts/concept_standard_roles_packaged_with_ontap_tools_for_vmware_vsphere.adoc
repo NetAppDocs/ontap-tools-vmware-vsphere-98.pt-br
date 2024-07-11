@@ -1,0 +1,88 @@
+---
+permalink: concepts/concept_standard_roles_packaged_with_ontap_tools_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Para simplificar o trabalho com o vCenter Server Privileges e o controle de acesso baseado em função (RBAC), o Virtual Storage Console (VSC) fornece funções VSC padrão que permitem executar tarefas importantes do VSC. Há também uma função somente leitura que permite exibir informações do VSC, mas não executar nenhuma tarefa.' 
+---
+= Funções padrão incluídas com ferramentas ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para simplificar o trabalho com o vCenter Server Privileges e o controle de acesso baseado em funções (RBAC), o VSC (Virtual Storage Console) fornece funções VSC padrão que permitem executar tarefas importantes do VSC. Há também uma função somente leitura que permite exibir informações do VSC, mas não executar nenhuma tarefa.
+
+As funções padrão do VSC têm o Privileges específico do VSC necessário e o vCenter Server Privileges nativo necessários para que os usuários executem tarefas do VSC. Além disso, as funções são configuradas para que tenham o Privileges necessário em todas as versões com suporte do vCenter Server.
+
+Como administrador, você pode atribuir essas funções aos usuários, conforme necessário.
+
+
+NOTE: Quando você atualiza o VSC para a versão mais recente, as funções padrão são atualizadas automaticamente para funcionar com a nova versão do VSC.
+
+Você pode visualizar as funções padrão do VSC clicando em *Roles* na página inicial do vSphere Client.
+
+As funções que o VSC fornece permitem que você execute as seguintes tarefas:
+
+|===
+
+
+| *Função* | *Descrição* 
+
+
+ a| 
+Administrador do VSC
+ a| 
+Fornece todas as Privileges nativas do vCenter Server Privileges e do VSC que são necessárias para executar todas as tarefas do VSC.
+
+
+
+ a| 
+VSC somente leitura
+ a| 
+Fornece acesso somente leitura ao VSC. Esses usuários não podem executar nenhuma ação VSC controlada pelo acesso.
+
+
+
+ a| 
+Provisão de VSC
+ a| 
+Fornece todo o vCenter Server Privileges nativo e o Privileges específico do VSC necessários para provisionar o storage. Você pode executar as seguintes tarefas:
+
+* Crie novos datastores
+* Destrua armazenamentos de dados
+* Ver informações sobre perfis de capacidade de armazenamento
+
+
+|===
+
+
+== Diretrizes para o uso de funções padrão do VSC
+
+Quando você trabalha com ferramentas padrão do ONTAP para funções do VMware vSphere, há certas diretrizes que você deve seguir.
+
+Você não deve modificar diretamente as funções padrão. Se o fizer, o VSC substituirá as alterações sempre que atualizar o VSC. O instalador atualiza as definições de função padrão cada vez que você atualiza o VSC. Isso garante que as funções sejam atuais para sua versão do VSC, bem como para todas as versões com suporte do vCenter Server.
+
+No entanto, você pode usar as funções padrão para criar funções adaptadas ao seu ambiente. Para fazer isso, você deve copiar a função padrão do VSC e, em seguida, editar a função copiada. Ao criar uma nova função, você pode manter essa função mesmo quando você reiniciar ou atualizar o serviço VSC Windows.
+
+Algumas das maneiras pelas quais você pode usar as funções padrão do VSC incluem o seguinte:
+
+* Use as funções VSC padrão para todas as tarefas VSC.
++
+Nesse cenário, as funções padrão fornecem todas as Privileges que um usuário precisa para executar as tarefas do VSC.
+
+* Combine funções para expandir as tarefas que um usuário pode executar.
++
+Se as funções padrão do VSC oferecerem muita granularidade para o seu ambiente, você poderá expandir as funções criando grupos de nível mais alto que contenham várias funções.
+
++
+Se um usuário precisar executar outras tarefas que não sejam do VSC que exijam o vCenter Server Privileges nativo adicional, você poderá criar uma função que forneça esses Privileges e adicioná-los ao grupo também.
+
+* Crie papéis mais refinados.
++
+Se a sua empresa exigir que você implemente funções mais restritivas do que as funções VSC padrão, você poderá usar as funções VSC para criar novas funções.
+
++
+Nesse caso, você clonaria as funções VSC necessárias e editaria a função clonada para que ela tenha apenas o Privileges que seu usuário precisa.
+
+

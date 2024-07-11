@@ -1,0 +1,14 @@
+---
+permalink: deploy/concept_requirements_for_deploying_ontap_tools_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords:  
+summary: Você deve estar ciente dos requisitos de implantação antes de implantar as ferramentas do ONTAP e decidir as tarefas que deseja executar. Com base em suas tarefas, você pode escolher o modelo de implantação para implantar as ferramentas do ONTAP 
+---
+= Requisitos para implantar as ferramentas do ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve estar ciente dos requisitos de implantação antes de implantar as ferramentas do ONTAP e decidir as tarefas que deseja executar. Com base em suas tarefas, você pode escolher o modelo de implantação para implantar as ferramentas do ONTAP

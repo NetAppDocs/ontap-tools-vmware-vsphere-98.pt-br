@@ -1,0 +1,20 @@
+---
+permalink: deploy/concept_configure_storage_replication_adapter_for_disaster_recovery.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Se você quiser configurar o vCenter Server para recuperação de desastres, você deve habilitar o Storage Replication Adapter (SRA) depois de implantar o . A implantação de ferramentas do ONTAP instala o VSC por padrão. Você deve habilitar o SRA para o vCenter Server após a implantação das ferramentas do ONTAP.' 
+---
+= Configurar o adaptador de replicação de armazenamento para recuperação de desastres
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se quiser configurar o vCenter Server para recuperação de desastres, você deverá habilitar o Storage Replication Adapter (SRA) após a implantação do . A implantação de ferramentas do ONTAP instala o VSC por padrão. Você deve habilitar o SRA para o vCenter Server após a implantação das ferramentas do ONTAP.
+
+*Informações relacionadas*
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Storage_Replication_Adapter_for_Data_ONTAP/SRA_4.0P1_client_plugin_(netapp_sra_4.0P1_ontap_64bit.msi)_hangs_at_the_server_IP["A instalação do plug-in do cliente SRA 4.0P1 (NetApp_sra_4.0P1__ONTAP_64bit.msi) trava na tela IP e senha do servidor"]
+
+link:../protect/task_enable_storage_replication_adapter.html["Ative o adaptador de replicação de armazenamento"]
