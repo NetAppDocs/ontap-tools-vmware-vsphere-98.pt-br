@@ -41,4 +41,10 @@ link:https://www.netapp.com/pdf.html?item=/media/11887-patentspage.pdf["https://
 
 link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.com/company/legal/privacy-policy/"^]
 
+
+
+== Código aberto
+
+Os arquivos de aviso fornecem informações sobre direitos autorais de terceiros e licenças usadas no software NetApp.
+
 https://library.netapp.com/ecm/ecm_download_file/ECMLP2875811["Aviso para as ferramentas do ONTAP para VMware vSphere 9,8"^]

@@ -1825,22 +1825,7 @@
   <block id="1c30dcc8f4d7a52289b613541eae0de4" category="list-text">No painel esquerdo do OTV, *Definições &gt; Definições administrativas &gt; gerir capacidades* e ative as capacidades necessárias.</block>
   <block id="20cbf632da037959a9ff1b82711dd95e" category="admonition">O Fornecedor VASA está ativado por predefinição. Se você quiser usar a capacidade de replicação para armazenamentos de dados vVols, use o botão de alternância Ativar replicação vVols.</block>
   <block id="1537475e9cb38b66999a49d547c694d2" category="list-text">Introduza o endereço IP das ferramentas do ONTAP e a palavra-passe do administrador e, em seguida, clique em *Apply*.</block>
-  <block id="de6edae22bc37b97b38a15c7f8af62e2" category="inline-link"><block ref="de6edae22bc37b97b38a15c7f8af62e2" category="inline-link-rx"></block></block>
-  <block id="bb66384fc72d3c628df8a5f0f82af691" category="paragraph"><block ref="bb66384fc72d3c628df8a5f0f82af691" category="inline-link-rx"></block></block>
-  <block id="a93bc0a57623c2facaa010825c808507" category="inline-link"><block ref="a93bc0a57623c2facaa010825c808507" category="inline-link-rx"></block></block>
-  <block id="e895a12067be0bbd74a4e8b2b0aa1151" category="paragraph"><block ref="e895a12067be0bbd74a4e8b2b0aa1151" category="inline-link-rx"></block></block>
-  <block id="547ea2e305891e64d8e744949b0aca2c" category="inline-link"><block ref="547ea2e305891e64d8e744949b0aca2c" category="inline-link-rx"></block></block>
-  <block id="f48d97bbf0d920d837c970ab54fcbf14" category="paragraph"><block ref="f48d97bbf0d920d837c970ab54fcbf14" category="inline-link-rx"></block></block>
-  <block id="50921fca0d376fca62102a5e608994e2" category="inline-link"><block ref="50921fca0d376fca62102a5e608994e2" category="inline-link-rx"></block></block>
-  <block id="3440f69304b6f0194e5502be93aede3f" category="paragraph"><block ref="3440f69304b6f0194e5502be93aede3f" category="inline-link-rx"></block></block>
-  <block id="b4de17ead867a3cf0b9d11e57e562672" category="section-title">Tradução de máquina</block>
-  <block id="19d4bd8b5bc76a91b74c1aa69ecea894" category="paragraph">Informações importantes sobre conteúdo localizado.</block>
-  <block id="db9bfd81e26275c9db26e2db3ac172c3" category="inline-link"><block ref="db9bfd81e26275c9db26e2db3ac172c3" category="inline-link-rx"></block></block>
-  <block id="53028fa3036b4b4d8b4ba1c27bf5f0f8" category="paragraph"><block ref="53028fa3036b4b4d8b4ba1c27bf5f0f8" category="inline-link-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Código aberto</block>
-  <block id="0d06100a9c9a8a7758a0d58988e99d2f" category="paragraph">Fornece informações sobre direitos autorais de terceiros e licenças usadas neste produto. O seu produto não utiliza necessariamente todos os componentes de software referidos abaixo.</block>
-  <block id="64c6ddc210e10224f0d332d29e9010bc" category="inline-link">Aviso para SnapCenter 4,5</block>
-  <block id="3cf6934ea14c435e103764252b785bcc" category="paragraph"><block ref="3cf6934ea14c435e103764252b785bcc" category="inline-link-rx"></block></block>
   <block id="cb0b3fe7df304baf3d39da385a4ec459" category="summary">Fornece informações importantes sobre esta versão das ferramentas do ONTAP para VMware vSphere, incluindo novos recursos e aprimoramentos, problemas corrigidos, problemas conhecidos, precauções e limitações.</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="doc">Notas de lançamento</block>
   <block id="01de6d9be7e1aa419839bb0c0de0ebde" category="paragraph">Fornece informações importantes sobre esta versão das ferramentas do ONTAP para VMware vSphere, incluindo problemas corrigidos, problemas conhecidos, precauções e limitações.</block>
@@ -1898,4 +1883,5 @@
   <block id="12681823486b41daa05bf9d691b0f8cd" category="sidebar">Migrar o Windows SRM para o dispositivo SRM</block>
   <block id="3d7d171ecad1cba0c2d8d707b648b023" category="sidebar">Configurar sites protegidos e de recuperação</block>
   <block id="6956cfc9382ccb41c8ac57f99255b409" category="sidebar">Verifique os sistemas de storage replicados</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">Os arquivos de aviso fornecem informações sobre direitos autorais de terceiros e licenças usadas no software NetApp.</block>
 </blocks>
