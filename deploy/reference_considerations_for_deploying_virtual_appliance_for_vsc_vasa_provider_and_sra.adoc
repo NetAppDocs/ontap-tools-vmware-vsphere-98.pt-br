@@ -98,7 +98,7 @@ Você pode criar as funções recomendadas do ONTAP usando o Gerenciador de sist
 
 Se um usuário tentar executar uma tarefa sem o Privileges e as permissões corretos, as opções de tarefa serão exibidas em cinza.
 
-* link:../concepts/concept_standard_roles_packaged_with_virtual_appliance_for_vsc_vp_and_sra.html["Funções padrão incluídas com ferramentas ONTAP"]
+* link:../concepts/concept_standard_roles_packaged_with_ontap_tools_for_vmware_vsphere.html["Funções padrão incluídas com ferramentas ONTAP"]
 * link:../concepts/concept_ontap_role_based_access_control_feature_for_ontap_tools.html["Permissões para sistemas de armazenamento ONTAP e objetos vSphere"]
 
 
